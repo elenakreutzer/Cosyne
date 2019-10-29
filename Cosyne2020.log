@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.25)  29 OCT 2019 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.25)  29 OCT 2019 21:42
 entering extended mode
 **./Cosyne2020.tex
 (Cosyne2020.tex
@@ -642,15 +642,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Figure_Cosyne2.pdf, id=1, 516.10664pt x 512.1233pt>
 File: Figure_Cosyne2.pdf Graphic file (type pdf)
 <use Figure_Cosyne2.pdf>
-Package pdftex.def Info: Figure_Cosyne2.pdf  used on input line 62.
+Package pdftex.def Info: Figure_Cosyne2.pdf  used on input line 60.
 (pdftex.def)             Requested size: 516.10538pt x 512.12204pt.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 66.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 
-LaTeX Warning: Float too large for page by 21.17833pt on input line 67.
+LaTeX Warning: Float too large for page by 21.17833pt on input line 65.
 
 [1
 
@@ -658,11 +658,11 @@ LaTeX Warning: Float too large for page by 21.17833pt on input line 67.
 Here is how much of TeX's memory you used:
  16023 strings out of 492946
  312476 string characters out of 3135527
- 380130 words of memory out of 3000000
+ 376453 words of memory out of 3000000
  19778 multiletter control sequences out of 15000+200000
  548042 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,63p,3628b,1129s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,63p,3628b,1133s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C
 :\Users\Elena\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
@@ -672,7 +672,7 @@ mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Cosyne2020.pdf (3 pages, 2004208 bytes).
+Output written on Cosyne2020.pdf (3 pages, 2004694 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

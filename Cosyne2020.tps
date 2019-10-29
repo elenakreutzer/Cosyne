@@ -18,7 +18,7 @@ Document=Cosyne2020.tex
 
 [Frame0_View0,0]
 TopLine=0
-Cursor=12664
+Cursor=11740
 
 [SessionInfo]
 FrameCount=1
