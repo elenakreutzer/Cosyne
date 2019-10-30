@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Cosyne2020.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=11740
+TopLine=74
+Cursor=6514
 
 [SessionInfo]
 FrameCount=1
