@@ -264,7 +264,7 @@ def plot_caption(ax, caption, xpos=.04, ypos=.88, color="k", fontdict={}):
             "ha" : "left", "va" : "bottom",
             #"weight" : "bold",
             "style" : "normal",
-            "size" : 16,
+            "size" : 12,
             "color": color,
             "zorder" : 1000,
         }

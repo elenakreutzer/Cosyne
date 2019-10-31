@@ -84,7 +84,7 @@ def wpathplot(ax,vectorfield,weightpath,**para):
     ax.scatter(target[0],target[1],color=color)
     #ax.set_aspect("equal")
     ax.quiver(W2,W1,vectorfield[:,:,0],vectorfield[:,:,1],angles="xy",color=color) 
-    ax.plot(weightpath[0,:],weightpath[1,:],color=color, linewidth=core.linewidth["aux_lines"])
+    ax.plot(weightpath[0,:],weightpath[1,:],color=color, linewidth=core.linewidth["aux_lines"],ls="dashed")
 
 def contourplot(ax,cost,levels,**para):
     

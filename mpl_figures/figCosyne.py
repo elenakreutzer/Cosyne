@@ -44,8 +44,8 @@ def get_gridspec():
             "spikes_after" : gs_aux0[0, 3],
             
             "dummy5" : gs_aux1[0, 0],
-            "weightpath_nat" : gs_aux1[0, 1],
-            "weightpath_euc" : gs_aux1[0, 2],
+            "weightpath_euc" : gs_aux1[0, 1],
+            "weightpath_nat" : gs_aux1[0, 2],
             "learningcurve" : gs_aux1[0, 3],
             
             "dummy9" : gs_aux2[0, 0],
@@ -53,10 +53,10 @@ def get_gridspec():
             "heatplot_heterosyn" : gs_aux2[0, 2],
             "heatplot_hom_het_comparison" : gs_aux2[0, 3],
             
-            "attenuation_example_abs" : gs_aux3[0, 0],
-            "attenuation_summary_abs" : gs_aux3[0, 1],
-            "var_result_example" : gs_aux3[0, 2],
-            "var_result_summary" : gs_aux3[0, 3],
+            "attenuation_summary_abs" : gs_aux3[0, 0],
+            "attenuation_example_abs" : gs_aux3[0, 1],
+            "var_result_summary" : gs_aux3[0, 2],
+            "var_result_example" : gs_aux3[0, 3],
         }
 
 def adjust_axes(axes):
@@ -79,8 +79,6 @@ def plot_labels(axes):
         labels_to_plot=[
             "dummy1",
             "spikes_before_teach",
-            "spikes_before",
-            "spikes_after",
             "weightpath_euc",
             "weightpath_nat",
             "learningcurve",
@@ -88,33 +86,43 @@ def plot_labels(axes):
             "heatplot_homsyn",
             "heatplot_heterosyn",
             "heatplot_hom_het_comparison",
-            "attenuation_example_abs",
             "attenuation_summary_abs",
-            "var_result_example",
-            "var_result_summary"
+            "attenuation_example_abs",
+            "var_result_summary",
+            "var_result_example"
         ],
        label_ypos = {
-             "dummy1":1.05,
-            "spikes_before_teach":1.05,
-            "spikes_before":1.05,
-            "spikes_after":1.05,
-            "weightpath_euc":1.05,
-            "weightpath_nat":1.05,
-            "learningcurve":1.05,
-            "dummy9":1.05,
-            "heatplot_homsyn":1.05,
-            "heatplot_heterosyn":1.05,
-            "heatplot_hom_het_comparison":1.05,
-            "attenuation_example_abs":1.05,
-            "attenuation_summary_abs":1.05,
-            "var_result_example":1.05,
-            "var_result_summary":1.05
+             "dummy1":.8,
+            "spikes_before_teach":.8,
+            "weightpath_euc":.95,
+            "weightpath_nat":.95,
+            "learningcurve":.95,
+            "dummy9":.9,
+            "heatplot_homsyn":.95,
+            "heatplot_heterosyn":0.95,
+            "heatplot_hom_het_comparison":0.95,
+            "attenuation_summary_abs":.95,
+            "attenuation_example_abs":.95,
+            "var_result_summary":.95,
+            "var_result_example":.95
             } ,              
                
                
                
-       label_xpos = { "delays_all": 0.02
-                    }
+       label_xpos = {  "dummy1":-0.2,
+            "spikes_before_teach":-0.2,
+            "weightpath_euc":-0.2,
+            "weightpath_nat":-0.2,
+            "learningcurve":-0.2,
+            "dummy9":-0.2,
+            "heatplot_homsyn":-0.2,
+            "heatplot_heterosyn":-0.2,
+            "heatplot_hom_het_comparison":-0.2,
+            "attenuation_summary_abs":-0.2,
+            "attenuation_example_abs":-0.2,
+            "var_result_summary":-0.2,
+            "var_result_example":-0.2,
+           }
         )
 
 def get_fig_kwargs():
