@@ -98,15 +98,15 @@ dataset_to_color = {
 linewidth={
         "normal":2.,
         "aux_lines":1.,
-        "scatter":15.,
-        "labelsize":10.,
+        "scatter":5.,
+        "labelsize":8.,
         "ticksize":8.,
-        "lp_heat":0.,
+        "lp_heat":1.,
         "arrow":0.0033,
         "contour":1.,
         "spikes":.5,
         "voltage":1.,
-        "cb":8.,
+        "cb":6.,
         }
 
 #labels

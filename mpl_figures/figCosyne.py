@@ -22,41 +22,43 @@ def get_gridspec():
     """
     # TODO: Adjust positioning
     
-    gs_main = gs.GridSpec(4, 1, hspace=0.6,
+    gs_main = gs.GridSpec(1, 5, wspace=0.6,
                           left=0.05, right=0.95, top=.9, bottom=0.1,
-                          height_ratios=[.5,1.,1.,.9])
-    gs_aux0 = gs.GridSpecFromSubplotSpec(1, 4, gs_main[0, 0], wspace=0.6,
-                                          width_ratios=[1.0, 1.0,1.0,1.0])
-    gs_aux1 = gs.GridSpecFromSubplotSpec(1, 4, gs_main[1, 0], wspace=0.6,
-                                          width_ratios=[1.0, 1.0,1.0,1.0])
-    gs_aux2 = gs.GridSpecFromSubplotSpec(1, 4, gs_main[2, 0], wspace=0.6,
-                                          width_ratios=[1.0, 1.0,1.0,1.0])
-    gs_aux3 = gs.GridSpecFromSubplotSpec(1, 4, gs_main[3, 0], wspace=0.6,
-                                          width_ratios=[1.0, 1.0,1.0,1.0])
+                          width_ratios=[1.,1.,1.,1.,1.])
+    gs_aux0 = gs.GridSpecFromSubplotSpec(3, 1, gs_main[0, 0],hspace=0.5,
+                                          height_ratios=[0.75, 1.0,1.0])
+    gs_aux1 = gs.GridSpecFromSubplotSpec(3,1, gs_main[0,1], hspace=0.5,
+                                          height_ratios=[0.75, 1.0,1.0])
+    gs_aux2 = gs.GridSpecFromSubplotSpec(3,1, gs_main[0,2], hspace=0.5,
+                                          height_ratios=[0.75, 1.0,1.0])
+    gs_aux3 = gs.GridSpecFromSubplotSpec(3,1, gs_main[0,3], hspace=0.5,
+                                          height_ratios=[0.75, 1.0,1.0])
+    gs_aux4 = gs.GridSpecFromSubplotSpec(4,1, gs_main[0,4], hspace=0.6,
+                                          height_ratios=[1.,1.,1.,1.])
+
 
     return {
             # these are needed for proper labelling
             # core.make_axes takes care of them
 
             "dummy1" : gs_aux0[0, 0],
-            "spikes_before_teach" : gs_aux0[0, 1],
-            "spikes_before" : gs_aux0[0, 2],
-            "spikes_after" : gs_aux0[0, 3],
+            "spikes_before_teach" : gs_aux1[0,0],
+            "spikes_before" : gs_aux2[0,0],
+            "spikes_after" : gs_aux3[0,0],
+            "attenuation_summary_abs" : gs_aux4[0, 0],
             
-            "dummy5" : gs_aux1[0, 0],
-            "weightpath_euc" : gs_aux1[0, 1],
-            "weightpath_nat" : gs_aux1[0, 2],
-            "learningcurve" : gs_aux1[0, 3],
+            "dummy5" : gs_aux0[1, 0],
+            "weightpath_euc" : gs_aux1[1,0],
+            "weightpath_nat" : gs_aux2[1,0],
+            "learningcurve" : gs_aux3[1,0],
+             "attenuation_example_abs" : gs_aux4[1,0],
             
-            "dummy9" : gs_aux2[0, 0],
-            "heatplot_homsyn" : gs_aux2[0, 1],
-            "heatplot_heterosyn" : gs_aux2[0, 2],
-            "heatplot_hom_het_comparison" : gs_aux2[0, 3],
-            
-            "attenuation_summary_abs" : gs_aux3[0, 0],
-            "attenuation_example_abs" : gs_aux3[0, 1],
-            "var_result_summary" : gs_aux3[0, 2],
-            "var_result_example" : gs_aux3[0, 3],
+            "dummy9" : gs_aux0[2, 0],
+            "heatplot_homsyn" : gs_aux1[2,0],
+            "heatplot_heterosyn" : gs_aux2[2,0],
+            "heatplot_hom_het_comparison" : gs_aux3[2,0],
+            "var_result_summary" : gs_aux4[2,0],
+            "var_result_example" : gs_aux4[3,0],
         }
 
 def adjust_axes(axes):
@@ -126,7 +128,7 @@ def plot_labels(axes):
         )
 
 def get_fig_kwargs():
-    return { "figsize" : (18./2.54,18./2.54) }
+    return { "figsize" : (18./2.54,10./2.54) }
 
 
 
@@ -299,7 +301,7 @@ def plot_learningcurve(ax):
     
     ax.set_xlabel(core.x_labels["lc"])
     ax.set_ylabel(core.y_labels["lc"])
-    ax.legend(("Euclidean gradient","Natural gradient"),loc="upper_right",fontsize=8.,labelspacing=0.05,borderaxespad=0.,borderpad=0.,handlelength=0.2,frameon=False)
+    ax.legend(("Euclidean gradient","Natural gradient"),loc="upper_right",fontsize=6.,labelspacing=0.05,borderaxespad=0.,borderpad=0.,handlelength=0.2,frameon=False)
     
 
 
@@ -321,7 +323,7 @@ def plot_heatplot_homsyn(ax):
     core.make_spines(ax)
     
     label=r"$\Delta w_{\mathrm{st}}$ [%]"
-    labelpad=-8.
+    labelpad=-2.
 
     plotf.hplot(ax,data,vmin,vmax,w_range,label,labelpad)
     ax.axhline(y=1.85,color=core.label_to_color["aux_line_heat"],linewidth=core.linewidth["aux_lines"],ls="dashed")
@@ -346,7 +348,7 @@ def plot_heatplot_heterosyn(ax):
     core.make_spines(ax)
     
     label=r"$\Delta w_{\mathrm{ust}}$ [%]"
-    labelpad=-8.
+    labelpad=-2.
 
     plotf.hplot(ax,data,vmin,vmax,w_range,label,labelpad)
     ax.axhline(y=1.85,color=core.label_to_color["aux_line_heat"],linewidth=core.linewidth["aux_lines"],ls="dashed")
@@ -362,7 +364,7 @@ def plot_heatplot_hom_het_comparison(ax):
 
     core.show_axis(ax)
     core.make_spines(ax)
-    labelpad=-1.
+    labelpad=0.
     
     label=r"$\rm{Sign}(\Delta w_{\mathrm{st}}\times\Delta w_{\mathrm{unst}})$"
 
@@ -386,10 +388,10 @@ def plot_attenuation_example_abs(ax):
     core.make_spines(ax)
 
     plotf.trace_plot(ax,weighttrace,time_params,perc=False,linewidth=core.linewidth["normal"])
-    labelpad=-8.
+    #labelpad=
     ax.set_xlabel(core.x_labels["trace_plot"])
-    ax.set_ylabel(core.y_labels["trace_plot_dend_abs"],labelpad=labelpad)
-   # ax.legend((r"$d=3\mu m$",r"$d=7\mu m$"),loc=2,fontsize=8.,handlelength=0.5,frameon=False)
+    ax.set_ylabel(core.y_labels["trace_plot_dend_abs"])
+    ax.legend((r"$d=3\mu m$",r"$d=7\mu m$"),loc="lower left",fontsize=6.,labelspacing=0.05,handlelength=0.2,frameon=False)
 
     
     pass
@@ -436,7 +438,7 @@ def plot_var_result_example(ax):
     ax.text(5.,75.,r"$t_0$")
     ax.set_xlabel(core.x_labels["trace_plot"])
     ax.set_ylabel(core.y_labels["trace_plot"])
-    ax.legend((r"$w_1$",r"$w_2$",r"$w_3$"),loc=2,fontsize=8.,handlelength=0.5,frameon=False)
+    ax.legend((r"$w_1$",r"$w_2$",r"$w_3$"),loc="upper left",fontsize=6.,labelspacing=0.05,borderaxespad=0.5,borderpad=0.,handlelength=0.2,frameon=False)
     
 
 
